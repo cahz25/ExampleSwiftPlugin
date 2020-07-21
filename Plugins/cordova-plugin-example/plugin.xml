@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-example" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>cordova-plugin-example</name>
+  <js-module name="cordova-plugin-example" src="www/cordova-plugin-example.js">
+    <clobbers target="cordova.plugins.example" />
+  </js-module>
+  <platform name="ios">
+    <dependency id="cordova-plugin-add-swift-support"/>
+    <config-file parent="/*" target="config.xml">
+      <feature name="CordovaPluginExample">
+        <param name="ios-package" value="CordovaPluginExample" />
+      </feature>
+    </config-file>
+    <header-file src="src/ios/MyApp-Bridging-Header.h" />
+    <source-file src="src/ios/CordovaPluginExample.swift" />
+  </platform>
+</plugin>

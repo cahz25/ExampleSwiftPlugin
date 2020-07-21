@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-example",
+  "version": "1.0.0",
+  "description": "Test plugin",
+  "cordova": {
+    "id": "cordova-plugin-example",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "cahz",
+  "license": "MIT"
+}
