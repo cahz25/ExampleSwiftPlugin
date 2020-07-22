@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-example",
   "version": "1.0.0",
-  "description": "Test plugin",
+  "description": "Plugin de prueba",
   "cordova": {
     "id": "cordova-plugin-example",
     "platforms": [

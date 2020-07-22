@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PluginExampleProvider } from '../providers/plugin-example.provider';
+import { PluginExampleProvider } from 'src/providers/plugin-example.provider';
 
 @Component({
   selector: 'app-home',

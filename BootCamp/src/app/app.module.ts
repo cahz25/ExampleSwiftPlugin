@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PluginExampleProvider } from './providers/plugin-example.provider';
+import { PluginExampleProvider } from 'src/providers/plugin-example.provider';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,8 +18,8 @@ import { PluginExampleProvider } from './providers/plugin-example.provider';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    PluginExampleProvider
+    PluginExampleProvider,
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

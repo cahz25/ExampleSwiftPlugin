@@ -7,16 +7,22 @@
 
 import Foundation
 
-@objc(CordovaPluginExample) class CordovaPluginExample : CDVPlugin {
+@objc(CordovaPluginExample)
+class CordovaPluginExample: CDVPlugin {
 
     @objc(coolMethod:)
     func coolMethod(command: CDVInvokedUrlCommand) {
-        /// Respuesta del plugin para la parte hibrida
-        var pluginResult = CDVPluginResult(
-            status: CDVCommandStatus_ERROR
-        )
-        pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: "Hoola")
-        self.commandDelegate!.send(pluginResult, callbackId: command.callbackId)
-    }
+        var pluginResult = CDVPluginResult(status: .error)
+        let echo: String? = command.arguments?[0] as? String
 
+        let view = ExampleViewController()
+
+        if echo != nil {
+            view.labelFromHybrid = echo!
+            pluginResult = CDVPluginResult(status: .ok, messageAs: echo!)
+            self.viewController?.present(view, animated: true, completion: nil)
+        }
+
+        self.commandDelegate.send(pluginResult, callbackId: command.callbackId)
+    }
 }
