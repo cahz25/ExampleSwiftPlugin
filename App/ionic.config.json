@@ -1,0 +1,7 @@
+{
+  "name": "Bootcamp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
